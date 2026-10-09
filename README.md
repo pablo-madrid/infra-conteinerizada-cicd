@@ -1,5 +1,5 @@
 # infra-conteinerizada-cicd
-Resumo. Este trabalho apresenta a implantação de uma infraestrutura conteinerizada em uma 
+Este trabalho apresenta a implantação de uma infraestrutura conteinerizada em uma 
 máquina virtual Debian, utilizando Docker e Portainer para o gerenciamento visual dos serviços. O 
 ambiente foi organizado em Stacks independentes para produtividade, controle de versão, integração 
 contínua e registro privado de imagens. Foram implantados o Nextcloud integrado ao MariaDB, o 
@@ -9,6 +9,7 @@ Nextcloud, Forgejo e Runner foram enviadas a um projeto privado no Harbor. Os re
 demonstraram o funcionamento integrado dos serviços e evidenciaram dificuldades relacionadas à 
 inicialização do Portainer, divergência entre branches Git, checkout do código na pipeline e 
 publicação de imagens no registro privado. 
+
 Abstract. This paper presents the deployment of a containerized infrastructure on a Debian virtual 
 machine, using Docker and Portainer for visual service management. The environment was 
 organized into independent stacks for productivity, version control, continuous integration, and 
