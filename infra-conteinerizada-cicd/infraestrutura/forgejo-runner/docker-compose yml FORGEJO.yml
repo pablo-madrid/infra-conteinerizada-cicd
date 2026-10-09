@@ -1,0 +1,24 @@
+version: '3.8'
+
+volumes:
+  forgejo_data:
+  runner_data:
+
+services:
+  forgejo:
+    image: code.forgejo.org/forgejo/forgejo:8
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - forgejo_data:/data
+  
+  runner:
+    image: code.forgejo.org/forgejo/runner:8
+    user: root
+    command: forgejo-runner daemon
+    restart: always
+    privileged: true
+    volumes:
+      - runner_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
